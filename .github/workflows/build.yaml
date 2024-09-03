@@ -63,7 +63,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: ${{ needs.build.outputs.project_name }}.apk
       - run: mv *.apk "${{ needs.build.outputs.project_name}}-${{ github.ref_name }}.apk"
